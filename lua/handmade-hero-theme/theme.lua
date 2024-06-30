@@ -118,8 +118,10 @@ function M.setup(config)
     ["@keyword.export"] = { fg = c.keyword, style = config.keyword_style },
     ["@keyword.function"] = { fg = c.keyword, style = config.keyword_style },
     ["@keyword.operator"] = { fg = c.keyword },
+    ["@keyword.directive.cpp"] = { fg = "#FFFFFF" },
+    ["@keyword.directive.define.cpp"] = { fg = "#FFFFFF" },
     ["@include"] = { fg = c.keyword, style = config.keyword_style },
-    ["@operator"] = { fg = c.operator_alt },
+    ["@operator"] = { fg = "#b3b3b3" },
     ["@exception"] = { fg = c.keyword },
     ["@type"] = { fg = c.text_default },
     ["@type.builtin"] = { fg = c.base },
@@ -137,6 +139,8 @@ function M.setup(config)
     ["@tag"] = { fg = c.text_default },
     ["@tag.delimiter"] = { fg = c.operator },
     ["@tag.attribute"] = { fg = c.text_default },
+    
+    ["@type.builtin.cpp"] = { fg = "#fcee68" },
 
     -- per language TreeSitter
     ["@variable.python"] = { fg = c.text_default, bg = c.none },
@@ -148,16 +152,16 @@ function M.setup(config)
     ["@variable.javascript"] = { fg = c.text_default },
     ["@tag.attribute"] = { fg = c.base },
 
-    ["@lsp.type.class"] = { fg = c.operator },
+    ["@lsp.type.class"] = { fg = "#fcee68" },
     ["@lsp.type.decorator"] = { fg = c.operator },
     ["@lsp.type.enum"] = { fg = c.operator },
     ["@lsp.type.enumMember"] = { fg = c.operator },
     ["@lsp.type.function"] = { fg = c.functionh, style = config.function_style },
     ["@lsp.type.interface"] = { fg = c.operator },
-    ["@lsp.type.macro"] = { fg = c.operator },
+    ["@lsp.type.macro"] = { fg = c.blue },
     ["@lsp.type.method"] = { fg = c.functionh },
     ["@lsp.type.namespace"] = { fg = c.text_default },
-    ["@lsp.type.parameter"] = { fg = c.base },
+    ["@lsp.type.parameter"] = { fg = "#b3b3b3" },
     ["@lsp.type.property"] = { fg = c.text_default },
     ["@lsp.type.struct"] = { fg = c.operator },
     ["@lsp.type.type"] = { fg = c.text_default },
@@ -298,7 +302,7 @@ function M.setup(config)
     EasyMotionShade = { fg = c.NONE },
     Visual = { bg = c.highlight },
     MultiCursor = { bg = c.margin_hover },
-    Cursor = { bg = c.margin_hover, fg = c.NONE },
+    Cursor = { bg = "#5e5e5e" , fg = c.NONE },
 
     -- mix
     GitSignsCurrentLineBlame = { fg = c.comment, style = "italic" },
